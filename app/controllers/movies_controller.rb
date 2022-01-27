@@ -25,7 +25,9 @@ class MoviesController < ApplicationController
   end
 
   def update
+
     if @movie.update(movie_params)
+
       redirect_to @movie, notice: 'Movie was successfully updated.'
     else
       render :edit
